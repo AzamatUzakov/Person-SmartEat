@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", system-ui;
+
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.container {
+    width: 100%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0;
+    padding: 0 20px;
+    border-radius: 10px;
+    border: 2px solid #648179;
+    background-color: white;
+}
+
+header h1 {
+    font-size: 20px;
+}
+
+
+
+
+.first_section {
+    padding: 20px;
+    border: 2px solid #555;
+    border-radius: 10px;
+}
+
+.second_section {
+    margin-top: 30px;
+    display: block;
+}
+.pneMonthContainer{
+    display: none;
+}
+.bg_ {
+    margin-top: 7px;
+    padding: 0px 20px 20px;
+    border-radius: 10px;
+    border: 2px solid #555;
+    background-color: rgb(238, 238, 238);
+}
+
+.second_section h2 {
+    font-size: 20px;
+}
+
+.pr_p {
+    font-size: 20px !important;
+}
+
+.pr_h {
+    font-size: 15px;
+    font-weight: 700;
+    color: red;
+}
+
+.parameters {
+    width: 100%;
+    border-radius: 25px;
+    border: 1px solid #648179;
+    padding: 18px 14px;
+    background-color: rgb(238, 238, 238);
+}
+
+.bju_flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.bju_ {
+    text-align: center;
+}
+
+.bju_ p {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.bju_ b {
+    font-size: 17px;
+}
+
+.kl_ {
+    text-align: center !important;
+    font-weight: 700;
+
+}
+
+.heigt_bd {
+    display: none !important;
+}
+
+.heigt_bdWeek {
+    display: block !important;
+}
+
+.rotateBtn {
+    rotate: 180deg;
+    transition: .7s ease;
+}
+
+.he_null1 {
+    transition: .7s ease;
+    cursor: pointer;
+}
+
+.tBody {
+    display: none;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.days_box {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 700;
+
+}
+
+.RECIPE_block {
+    margin-top: 30px;
+    line-height: 25px;
+}
+
+.reci_fl {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.RECIPE_block h3 {
+    font-size: 15px !important;
+}
+
+.RECIPE_block p,
+li,
+u,
+i {
+    font-size: 13px !important;
+
+}
+
+.reci_fl li {
+    margin-left: 30px;
+}
+
+.recipeBtn {
+    width: 100px;
+    color: white;
+    background-color: #70AB37;
+    font-weight: 700;
+    border: 0;
+    height: 40px;
+    border-radius: 7px;
+    margin-top: 20px;
+    font-size: 13px;
+    transition: .4s ease;
+}
+
+.recipeBtn:hover {
+    background-color: gainsboro;
+    color: black;
+    transition: .4s ease;
+}
+
+hr {
+    margin: 20px 0;
+    border: 0;
+    height: 1px;
+    background-color: black;
+}
+
+
+.bt_p {
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px !important;
+    margin-top: 50px;
+}
+
+
+
+.buy_sect {
+    margin-top: 30px;
+}
+
+.buy_sect button {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 0;
+    color: white;
+    text-shadow: -1px 0px 1px black;
+    cursor: pointer;
+    transition: .4s ease;
+
+}
+.buy_sect a{
+    cursor: pointer;
+    transition: .4s ease;
+
+}
+.buy_sect button:hover{
+    background-color: gainsboro;
+    transition: .4s ease;
+    color: rgb(65, 65, 65);
+    font-size: 15px;
+} 
+.buy_sect p {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+.first_bt,
+.secon_bt {
+    background-color: #0099ff;
+}
+
+.third_bt {
+    background-color: #70AB37;
+}
+
+
+#openModalBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #333;
+    overflow: auto;
+    transition: right 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+    z-index: 1;
+}
+
+.modal-content {
+    padding: 20px;
+    color: #fff;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 20px 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+.modal.open {
+    right: 0;
+    opacity: 1;
+}
+
+
+
+
+
+
+.month_plan {
+    margin-top: 7px;
+    padding: 0px 20px 20px;
+    border-radius: 10px;
+    border: 2px solid #555;
+    background-color: rgb(238, 238, 238);
+}
+
+.monthPl_section{
+    margin-top: 20px;
+}
+
+.monthPl_section h2,
+.monthPl_section2 h2 {
+    font-size: 20px;
+}
+
+
+.tMonth_hiden,
+.tMonth_hidenD2,
+.tMonth_hidenD3,
+.tMonth_hidenD4,
+.tMonth_hidenD5,
+.tMonth_hidenD6,
+.tMonth_hidenD7 {
+    display: none;
+    margin-top: 30px !important;
+}
+
+
+.tMonth_hiden .days_box p,
+.tMonth_hidenD2 .days_box p,
+.tMonth_hidenD3 .days_box p,
+.tMonth_hidenD4 .days_box p,
+.tMonth_hidenD5 .days_box p,
+.tMonth_hidenD6 .days_box p,
+.tMonth_hidenD7 .days_box p {
+    font-size: 14px !important;
+}
+
+.tBodyMonth,
+.tBodyMonthday2,
+.tBodyMonthday3,
+.tBodyMonthday4,
+.tBodyMonthday5,
+.tBodyMonthday6,
+.tBodyMonthday7,
+.tBodyMonthw1,
+.tBodyMonthw2,
+.tBodyMonthw3,
+.tBodyMonthw4,
+.tBodyMonthw5,
+.tBodyMonthw6,
+.tBodyMonthw7,
+.tBodyMonthw11,
+.tBodyMonthw22,
+.tBodyMonthw33,
+.tBodyMonthw44,
+.tBodyMonthw55,
+.tBodyMonthw66,
+.tBodyMonthw77,
+.tBodyMonthw111,
+.tBodyMonthw222,
+.tBodyMonthw333,
+.tBodyMonthw444,
+.tBodyMonthw555,
+.tBodyMonthw666,
+.tBodyMonthw777
+ {
+    display: none;
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+.reci_fl div:nth-of-type(2) {
+    width: 135px; 
+}
+
+@media (max-width:500px) {
+
+    .pr_p,
+    .second_section h2 {
+        font-size: 17px !important;
+    }
+
+    .monthPl_section h2,
+    .monthPl_section2 h2 {
+        font-size: 17px !important;
+    }
+
+    .pr_h {
+        font-size: 13px !important;
+    }
+
+    .kl_ {
+        font-size: 13px !important;
+    }
+
+    .bju_ p {
+        font-size: 11px !important;
+    }
+
+    .bju_ b {
+        font-size: 12px !important;
+    }
+
+
+    .RECIPE_block h3 {
+        font-size: 14px !important;
+    }
+
+    .RECIPE_block p,
+    li,
+    u,
+    i {
+        font-size: 12px !important;
+
+    }
+
+    .reci_fl li {
+        margin-left: 10px !important;
+    }
+
+    .reci_fl {
+        display: flex;
+        justify-content: start;
+        gap: 20px;
+
+    }
+
+
+}
