@@ -42,7 +42,9 @@ label {
     cursor: pointer;
     transition: .5s ease-in-out;
 }
-
+a{
+    text-decoration: none;
+}
 input {
     width: 60%;
     height: 10px;

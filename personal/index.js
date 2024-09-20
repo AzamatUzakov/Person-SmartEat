@@ -371,3 +371,25 @@ he_nullw777.onclick = () => {
 
 
 
+
+
+
+document.querySelectorAll('.recipeBtn').forEach(button => {
+    button.addEventListener('click', function() {
+        const modal = document.getElementById('customModal');
+        const modalText = document.getElementById('custom-modal-text');
+
+        // Show modal and start the animation
+        modal.classList.add('active');
+
+        // Set modal content to button's ID
+        modalText.textContent = `You clicked on button with ID: ${this.id}`;
+    });
+});
+
+document.querySelector('.close-modal-btn').addEventListener('click', function() {
+    const modal = document.getElementById('customModal');
+    
+    // Hide modal by moving it back up
+    modal.classList.remove('active');
+});
