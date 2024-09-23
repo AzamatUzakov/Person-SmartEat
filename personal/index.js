@@ -116,6 +116,19 @@ let tBodyMonthw777 = document.querySelector('.tBodyMonthw777')
 
 
 
+let ingridientsBT1 = document.querySelector('.ingridientsBT1')
+let IngrBodyMonth1 = document.querySelector('.IngrBodyMonth')
+
+let ingridientsBT2 = document.querySelector('.ingridientsBT2')
+let IngrBodyMonth2 = document.querySelector('.IngrBodyMonth2')
+
+
+let ingridientsBT3 = document.querySelector('.ingridientsBT3')
+let IngrBodyMonth3 = document.querySelector('.IngrBodyMonth3')
+
+let ingridientsBT4 = document.querySelector('.ingridientsBT4')
+let IngrBodyMonth4 = document.querySelector('.IngrBodyMonth4')
+
 
 
 
@@ -124,17 +137,17 @@ let oneMonthCont = document.querySelector('.pneMonthContainer')
 let second_section = document.querySelector('.second_section')
 
 Month_btn.onclick = () => {
-oneMonthCont.style.display = "block"
-second_section.style.display = "none"
+    oneMonthCont.style.display = "block"
+    second_section.style.display = "none"
 }
 
- he_null1.onclick = () => {
+he_null1.onclick = () => {
     fr_heig.classList.toggle('heigt_bdWeek')
     he_null1.classList.toggle('rotateBtn')
     console.log("click");
-    
+
 }
- 
+
 
 
 
@@ -170,212 +183,147 @@ he_nullMainWeek.onclick = () => {
 }
 
 
+// Группа 1 - первая коллекция блоков и кнопок
+const group1Blocks = [
+    { button: he_null2, block: tBodyMonth },
+    { button: he_null3, block: tBodyMonthday2 },
+    { button: he_null4, block: tBodyMonthday3 },
+    { button: he_null5, block: tBodyMonthday4 },
+    { button: he_null6, block: tBodyMonthday5 },
+    { button: he_null7, block: tBodyMonthday6 },
+    { button: he_null8, block: tBodyMonthday7 },
+    { button: ingridientsBT1, block: IngrBodyMonth1 }
+];
 
+// Группа 2 - вторая коллекция блоков и кнопок
+const group2Blocks = [
+    { button: he_nullw1, block: tBodyMonthw1 },
+    { button: he_nullw2, block: tBodyMonthw2 },
+    { button: he_nullw3, block: tBodyMonthw3 },
+    { button: he_nullw4, block: tBodyMonthw4 },
+    { button: he_nullw5, block: tBodyMonthw5 },
+    { button: he_nullw6, block: tBodyMonthw6 },
+    { button: he_nullw7, block: tBodyMonthw7 },
+    { button: ingridientsBT2, block: IngrBodyMonth2 }
+];
 
+// Группа 3 - третья коллекция блоков и кнопок
+const group3Blocks = [
+    { button: he_nullw11, block: tBodyMonthw11 },
+    { button: he_nullw22, block: tBodyMonthw22 },
+    { button: he_nullw33, block: tBodyMonthw33 },
+    { button: he_nullw44, block: tBodyMonthw44 },
+    { button: he_nullw55, block: tBodyMonthw55 },
+    { button: he_nullw66, block: tBodyMonthw66 },
+    { button: he_nullw77, block: tBodyMonthw77 },
+    { button: ingridientsBT3, block: IngrBodyMonth3 }
+];
 
-he_null2.onclick = () => {
-    tBodyMonth.classList.toggle('heigt_bdWeek')
-    he_null2.classList.toggle('rotateBtn')
-    console.log("click");
+// Группа 4 - четвертая коллекция блоков и кнопок
+const group4Blocks = [
+    { button: he_nullw111, block: tBodyMonthw111 },
+    { button: he_nullw222, block: tBodyMonthw222 },
+    { button: he_nullw333, block: tBodyMonthw333 },
+    { button: he_nullw444, block: tBodyMonthw444 },
+    { button: he_nullw555, block: tBodyMonthw555 },
+    { button: he_nullw666, block: tBodyMonthw666 },
+    { button: he_nullw777, block: tBodyMonthw777 },
+    { button: ingridientsBT4, block: IngrBodyMonth4 }
+];
 
-}
-he_null3.onclick = () => {
-    tBodyMonthday2.classList.toggle('heigt_bdWeek')
-    he_null3.classList.toggle('rotateBtn')
-    console.log("click");
-
-}
-he_null4.onclick = () => {
-    tBodyMonthday3.classList.toggle('heigt_bdWeek')
-    he_null4.classList.toggle('rotateBtn')
-    console.log("click");
-
-}
-he_null5.onclick = () => {
-    tBodyMonthday4.classList.toggle('heigt_bdWeek')
-    he_null5.classList.toggle('rotateBtn')
-    console.log("click");
-
-}
-he_null6.onclick = () => {
-    tBodyMonthday5.classList.toggle('heigt_bdWeek')
-    he_null6.classList.toggle('rotateBtn')
-    console.log("click");
-
-}
-he_null7.onclick = () => {
-    tBodyMonthday6.classList.toggle('heigt_bdWeek')
-    he_null7.classList.toggle('rotateBtn')
-    console.log("click");
-
-}
-he_null8.onclick = () => {
-    tBodyMonthday7.classList.toggle('heigt_bdWeek')
-    he_null8.classList.toggle('rotateBtn')
-    console.log("click");
-
-}
-
-
-
-//////////////////next Week///////////////
-
-
-
-he_nullw1.onclick = () => {
-    tBodyMonthw1.classList.toggle('heigt_bdWeek')
-    he_nullw1.classList.toggle('rotateBtn')
-    console.log("click");
-
-}
-he_nullw2.onclick = () => {
-    tBodyMonthw2.classList.toggle('heigt_bdWeek')
-    he_nullw2.classList.toggle('rotateBtn')
-    console.log("click");
-
-}
-he_nullw3.onclick = () => {
-    tBodyMonthw3.classList.toggle('heigt_bdWeek')
-    he_nullw3.classList.toggle('rotateBtn')
-    console.log("click");
-
-}
-he_nullw4.onclick = () => {
-    tBodyMonthw4.classList.toggle('heigt_bdWeek')
-    he_nullw4.classList.toggle('rotateBtn')
-    console.log("click");
-
-}
-he_nullw5.onclick = () => {
-    tBodyMonthw5.classList.toggle('heigt_bdWeek')
-    he_nullw5.classList.toggle('rotateBtn')
-    console.log("click");
-
+// Функция для закрытия всех блоков в одной группе
+function closeGroupBlocks(group) {
+    group.forEach(({ block, button }) => {
+        block.classList.remove('heigt_bdWeek');
+        button.classList.remove('rotateBtn');
+    });
 }
 
+// Добавляем обработчики для первой группы
+group1Blocks.forEach(({ button, block }) => {
+    button.onclick = () => {
+        closeGroupBlocks(group1Blocks); // Закрываем только первую группу
+        block.classList.toggle('heigt_bdWeek');
+        button.classList.toggle('rotateBtn');
+        console.log("click group 1");
+    };
+});
 
-he_nullw6.onclick = () => {
-    tBodyMonthw6.classList.toggle('heigt_bdWeek')
-    he_nullw6.classList.toggle('rotateBtn')
-    console.log("click");
+// Добавляем обработчики для второй группы
+group2Blocks.forEach(({ button, block }) => {
+    button.onclick = () => {
+        closeGroupBlocks(group2Blocks); // Закрываем только вторую группу
+        block.classList.toggle('heigt_bdWeek');
+        button.classList.toggle('rotateBtn');
+        console.log("click group 2");
+    };
+});
 
-}
-he_nullw7.onclick = () => {
-    tBodyMonthw7.classList.toggle('heigt_bdWeek')
-    he_nullw7.classList.toggle('rotateBtn')
-    console.log("click");
-
-}
+// Добавляем обработчики для третьей группы
+group3Blocks.forEach(({ button, block }) => {
+    button.onclick = () => {
+        closeGroupBlocks(group3Blocks); // Закрываем только третью группу
+        block.classList.toggle('heigt_bdWeek');
+        button.classList.toggle('rotateBtn');
+        console.log("click group 3");
+    };
+});
 
 
 
 ////////////////////////////next week/////////////////
 
-
-
-he_nullw11.onclick = () => {
-    tBodyMonthw11.classList.toggle('heigt_bdWeek')
-    he_nullw11.classList.toggle('rotateBtn')
-    console.log("click");
-
-}
-he_nullw22.onclick = () => {
-    tBodyMonthw22.classList.toggle('heigt_bdWeek')
-    he_nullw22.classList.toggle('rotateBtn')
-    console.log("click");
-
-}
-he_nullw33.onclick = () => {
-    tBodyMonthw33.classList.toggle('heigt_bdWeek')
-    he_nullw33.classList.toggle('rotateBtn')
-    console.log("click");
-
-}
-he_nullw44.onclick = () => {
-    tBodyMonthw44.classList.toggle('heigt_bdWeek')
-    he_nullw44.classList.toggle('rotateBtn')
-    console.log("click");
-
-}
-he_nullw55.onclick = () => {
-    tBodyMonthw55.classList.toggle('heigt_bdWeek')
-    he_nullw55.classList.toggle('rotateBtn')
-    console.log("click");
-
+// Функция для закрытия всех блоков в одной группе
+function closeGroupBlocks(group) {
+    group.forEach(({ block, button }) => {
+        block.classList.remove('heigt_bdWeek');
+        button.classList.remove('rotateBtn');
+    });
 }
 
+// Добавляем обработчики для первой группы
+group1Blocks.forEach(({ button, block }) => {
+    button.onclick = () => {
+        closeGroupBlocks(group1Blocks); // Закрываем только первую группу
+        block.classList.toggle('heigt_bdWeek');
+        button.classList.toggle('rotateBtn');
+        console.log("click group 1");
+    };
+});
 
-he_nullw66.onclick = () => {
-    tBodyMonthw66.classList.toggle('heigt_bdWeek')
-    he_nullw66.classList.toggle('rotateBtn')
-    console.log("click");
+// Добавляем обработчики для второй группы
+group2Blocks.forEach(({ button, block }) => {
+    button.onclick = () => {
+        closeGroupBlocks(group2Blocks); // Закрываем только вторую группу
+        block.classList.toggle('heigt_bdWeek');
+        button.classList.toggle('rotateBtn');
+        console.log("click group 2");
+    };
+});
 
-}
-he_nullw77.onclick = () => {
-    tBodyMonthw77.classList.toggle('heigt_bdWeek')
-    he_nullw77.classList.toggle('rotateBtn')
-    console.log("click");
+// Добавляем обработчики для третьей группы
+group3Blocks.forEach(({ button, block }) => {
+    button.onclick = () => {
+        closeGroupBlocks(group3Blocks); // Закрываем только третью группу
+        block.classList.toggle('heigt_bdWeek');
+        button.classList.toggle('rotateBtn');
+        console.log("click group 3");
+    };
+});
 
-}
-
-
-
-////////////////////////////next week/////////////////
-
-
-
-he_nullw111.onclick = () => {
-    tBodyMonthw111.classList.toggle('heigt_bdWeek')
-    he_nullw111.classList.toggle('rotateBtn')
-    console.log("click");
-
-}
-he_nullw222.onclick = () => {
-    tBodyMonthw222.classList.toggle('heigt_bdWeek')
-    he_nullw222.classList.toggle('rotateBtn')
-    console.log("click");
-
-}
-he_nullw333.onclick = () => {
-    tBodyMonthw333.classList.toggle('heigt_bdWeek')
-    he_nullw333.classList.toggle('rotateBtn')
-    console.log("click");
-
-}
-he_nullw444.onclick = () => {
-    tBodyMonthw444.classList.toggle('heigt_bdWeek')
-    he_nullw444.classList.toggle('rotateBtn')
-    console.log("click");
-
-}
-he_nullw555.onclick = () => {
-    tBodyMonthw555.classList.toggle('heigt_bdWeek')
-    he_nullw555.classList.toggle('rotateBtn')
-    console.log("click");
-
-}
-
-
-he_nullw666.onclick = () => {
-    tBodyMonthw666.classList.toggle('heigt_bdWeek')
-    he_nullw666.classList.toggle('rotateBtn')
-    console.log("click");
-
-}
-he_nullw777.onclick = () => {
-    tBodyMonthw777.classList.toggle('heigt_bdWeek')
-    he_nullw777.classList.toggle('rotateBtn')
-    console.log("click");
-
-}
-
-
-
-
+// Добавляем обработчики для четвертой группы
+group4Blocks.forEach(({ button, block }) => {
+    button.onclick = () => {
+        closeGroupBlocks(group4Blocks); // Закрываем только четвертую группу
+        block.classList.toggle('heigt_bdWeek');
+        button.classList.toggle('rotateBtn');
+        console.log("click group 4");
+    };
+});
 
 
 document.querySelectorAll('.recipeBtn').forEach(button => {
-    button.addEventListener('click', function() {
+    button.addEventListener('click', function () {
         const modal = document.getElementById('customModal');
         const modalText = document.getElementById('custom-modal-text');
 
@@ -387,9 +335,9 @@ document.querySelectorAll('.recipeBtn').forEach(button => {
     });
 });
 
-document.querySelector('.close-modal-btn').addEventListener('click', function() {
+document.querySelector('.close-modal-btn').addEventListener('click', function () {
     const modal = document.getElementById('customModal');
-    
+
     // Hide modal by moving it back up
     modal.classList.remove('active');
 });

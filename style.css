@@ -1,109 +1,143 @@
-* {}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", system-ui;
+}
+
+
 
 body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    font-family: 'Jost', sans-serif;
-    background: linear-gradient(to bottom, #269526, #69a725, #77b327);
-    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+
 }
 
 .main {
-    width: 350px;
-    height: 500px;
-    background: red;
-    overflow: hidden;
-    background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
-    border-radius: 10px;
-    box-shadow: 5px 20px 50px #000;
+    width: 100%;
+    background-color: white;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px !important;
+    margin-top: 50px;
+    border-radius: 25px;
 }
 
-#chk {
-    display: none;
+.main img {
+    margin: 0 auto;
+    margin-bottom: 20px;
 }
 
-.signup {
-    position: relative;
-    width: 350px !important;
-    height: 100%;
+h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
 }
 
-label {
-    color: #fff;
-    font-size: 2.3em;
-    justify-content: center;
-    display: flex;
-    margin: 50px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: .5s ease-in-out;
+p {
+    text-align: start;
+    margin-bottom: 5px;
 }
-a{
-    text-decoration: none;
-}
+
 input {
-    width: 60%;
-    height: 10px;
-    background: #e0dede;
-    justify-content: center;
-    display: flex;
-    margin: 20px auto;
-    padding: 12px;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-}
-
-button {
-    width: 60%;
+    width: 100%;
     height: 40px;
-    margin: 10px auto;
-    justify-content: center;
-    display: block;
-    color: #519710;
-    background: white;
-    font-size: 1em;
-    font-weight: bold;
-    margin-top: 30px;
-    outline: none;
-    border: 2px solid #519710;
-    border-radius: 5px;
-    transition: .2s ease-in;
-    cursor: pointer;
+    border-radius: 23px;
+    padding-left:8px ;
+    border: 1px solid gray;
+}
+#EmailInp{
+    margin-bottom: 15px;
 }
 
-button:hover {
-    background: #519710;
+a {
+    font-size: 12px;
+    color: #70AB37;
+    text-decoration: none;
+    font-weight: 600;
+margin-bottom: 5px ;
+}
+
+.remberMe_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 30px 0;
+    
+}
+button{
+    margin-bottom: 20px;
+    width: 100%;
+    height: 50px;
+    font-size: 17px;
+    font-weight: 600;
     color: white;
-    border-color: white;
+    border-radius: 25px;
+    border: 0;
+    background-color: #70AB37;
+    cursor: pointer;
+    transition: .4s ease    ;
 }
-
-.login {
-    height: 460px;
-    background: #eee;
-    border-radius: 60% / 10%;
-    transform: translateY(-180px);
-    transition: .8s ease-in-out;
+button:hover{
+    background-color: gainsboro;
+    color: black;
+    transition: .4s ease;
 }
+/* Скрываем стандартный input */
+input[type="radio"] {
+    display: none;
+  }
+  
+  /* Контейнер для кастомной радио-кнопки */
+  .custom-radio {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  /* Стилизуем кастомную радио-кнопку */
+  .radio-btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid black; /* Цвет обводки */
+    margin-right: 10px;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  /* Внутренний кружок для выбранного состояния */
+  .radio-btn::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #70AB37; /* Цвет заливки */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  
+  /* Когда input выбран, отображаем внутренний кружок */
+  input[type="radio"]:checked + .radio-btn::after {
+    opacity: 1;
+  }
+  
+  /* Дополнительные эффекты при наведении */
+  .custom-radio:hover .radio-btn {
+    border-color: black; /* Более насыщенный цвет при наведении */
+  }
+  
+  input[type="radio"]:checked + .radio-btn {
+    border-color: black; /* Цвет при активной радиокнопке */
+  }
+  
 
-.login label {
-    color: #519710;
-    transform: scale(.6);
-}
-
-#chk:checked~.login {
-    transform: translateY(-500px);
-
-}
-
-#chk:checked~.login label {
-    transform: scale(1);
-}
-
-#chk:checked~.signup label {
-    transform: scale(.6);
-}
+  

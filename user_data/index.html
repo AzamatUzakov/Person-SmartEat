@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ваши данные</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+
+    <main>
+        <div class="conatainer">
+            <header>
+                <h1>Личный кабинет</h1> <img width="30px" src="./icon/burger.png" alt="" id="openModalBtn">
+            </header>
+
+
+            <form class="dataForm">
+                <h2>ВАШИ ДАННЫЕ</h2>
+                <p>Ваше имя</p>
+                <input type="name">
+                <br><br>
+                <p>E-mail</p>
+                <input type="email">
+                <br><br>
+                <p>Ваш телефон</p>
+                <input type="tel">
+                <br><br>
+                <p>Ваша страна</p>
+                <input type="text">
+                <br><br>
+                <p>Ваш город</p>
+                <input type="text">
+                <br><br>
+                <button>Сохранить</button>
+            </form>
+
+
+            <div class="btns_box">
+                <a href="../personal/index.html"><button>Текущий план</button></a>
+                <a href="#"><button>Новый план</button></a>
+                <a href="#"><button>Расшифровка анализов</button></a>
+                <p class="bottomP">Расшифровка анализов доступна на оплаченном плане</p>
+            </div>
+        </div>
+
+
+        <div class="modal" id="modal">
+            <span class="close-btn" id="closeModalBtn">&times;</span>
+            <ul>
+                <li><a href="#">Текущий план</a></li>
+                <li><a href="#">Новый план</a></li>
+                <li><a href="#">Личный кабинет</a></li>
+                <li><a href="#">Главная страница</a></li>
+                <li><a href="#">Выйти</a></li>
+            </ul>
+        </div>
+
+    </main>
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

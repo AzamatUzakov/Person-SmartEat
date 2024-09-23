@@ -8,8 +8,12 @@
 
 }
 
+body {
+    background-color: #f5f5f5;
+}
+
 main {
-    max-width: 800px;
+    max-width: 400px;
     margin: 0 auto;
     margin-top: 30px;
     padding: 10px;
@@ -23,52 +27,64 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 30px 0;
-    padding: 0 20px;
-    border-radius: 10px;
-    border: 2px solid #648179;
-    background-color: white;
+    padding: 20px;
+    width: 100%;
+    margin-top: 30px;
+    border-radius: 25px !important;
+    -webkit-box-shadow: -3px 4px 8px 0px rgba(112, 171, 55, 0.2);
+    -moz-box-shadow: -3px 4px 8px 0px rgba(112, 171, 55, 0.2);
+    box-shadow: -3px 4px 8px 0px rgba(112, 171, 55, 0.2);
+    border: 1px solid rgba(112, 171, 55, 0.2);
+    margin-bottom: 30px;
+    background-color: #ffffff;
 }
 
 header h1 {
-    font-size: 20px;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 
 
 
 .first_section {
-    padding: 20px;
-    border: 2px solid #555;
+    padding: 25px;
     border-radius: 10px;
+    background-color: #ffffff;
 }
 
 .second_section {
     margin-top: 30px;
     display: block;
 }
-.pneMonthContainer{
+
+.pneMonthContainer {
     display: none;
 }
+
 .bg_ {
     margin-top: 7px;
-    padding: 0px 20px 20px;
-    border-radius: 10px;
-    border: 2px solid #555;
-    background-color: rgb(238, 238, 238);
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 1px solid #555;
+    background-color: rgb(255, 255, 255);
 }
 
 .second_section h2 {
     font-size: 20px;
+    font-weight: 500;
+    text-align: center;
 }
 
 .pr_p {
-    font-size: 20px !important;
+    font-size: 14px !important;
+    font-weight: 500;
+
 }
 
 .pr_h {
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 10px !important;
+    font-weight: 400;
     color: red;
 }
 
@@ -76,8 +92,8 @@ header h1 {
     width: 100%;
     border-radius: 25px;
     border: 1px solid #648179;
-    padding: 18px 14px;
-    background-color: rgb(238, 238, 238);
+    padding: 11px 14px;
+    background: #F7D14A;
 }
 
 .bju_flex {
@@ -92,17 +108,19 @@ header h1 {
 }
 
 .bju_ p {
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 10px;
+    font-weight: 400;
 }
 
 .bju_ b {
-    font-size: 17px;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .kl_ {
+    font-size: 14px;
     text-align: center !important;
-    font-weight: 700;
+    font-weight: 500;
 
 }
 
@@ -112,6 +130,7 @@ header h1 {
 
 .heigt_bdWeek {
     display: block !important;
+
 }
 
 .rotateBtn {
@@ -131,12 +150,11 @@ header h1 {
 }
 
 .days_box {
-    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 12px;
+    font-weight: 500;
 
 }
 
@@ -151,8 +169,32 @@ header h1 {
 
 }
 
+.IngrBodyMonth,
+.IngrBodyMonth2,
+.IngrBodyMonth3,
+.IngrBodyMonth4 {
+    display: none;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.IngrBodyMonth ul,
+.IngrBodyMonth2 ul,
+.IngrBodyMonth3 ul,
+.IngrBodyMonth4 ul {
+    list-style: none;
+}
+
+.IngrBodyMonth h3,
+.IngrBodyMonth2 h3,
+.IngrBodyMonth3 h3,
+.IngrBodyMonth4 h3 {
+    margin-top: 20px;
+}
+
 .RECIPE_block h3 {
-    font-size: 15px !important;
+    font-size: 14px !important;
+    font-weight: 500;
 }
 
 .RECIPE_block p,
@@ -168,15 +210,15 @@ i {
 }
 
 .recipeBtn {
-    width: 100px;
+    width: 100%;
     color: white;
     background-color: #70AB37;
     font-weight: 700;
     border: 0;
-    height: 40px;
-    border-radius: 7px;
+    padding: 5px 0;
+    border-radius: 35px;
     margin-top: 20px;
-    font-size: 13px;
+    font-size: 10px;
     transition: .4s ease;
 }
 
@@ -196,8 +238,8 @@ hr {
 
 .bt_p {
     text-align: center;
-    font-weight: 600;
-    font-size: 14px !important;
+    font-weight: 500;
+    font-size: 10px !important;
     margin-top: 50px;
 }
 
@@ -211,27 +253,28 @@ hr {
     width: 100%;
     height: 40px;
     margin-top: 10px;
-    border-radius: 10px;
+    border-radius: 28px;
     font-size: 14px;
     font-weight: 600;
     border: 0;
     color: white;
-    text-shadow: -1px 0px 1px black;
     cursor: pointer;
     transition: .4s ease;
 
 }
-.buy_sect a{
+
+.buy_sect a {
     cursor: pointer;
     transition: .4s ease;
 
 }
-.buy_sect button:hover{
+
+.buy_sect button:hover {
     background-color: gainsboro;
     transition: .4s ease;
     color: rgb(65, 65, 65);
-    font-size: 15px;
-} 
+}
+
 .buy_sect p {
     text-align: center;
     font-size: 12px;
@@ -241,16 +284,15 @@ hr {
 
 .first_bt,
 .secon_bt {
-    background-color: #0099ff;
+    background: #F7D14A;
 }
 
 .third_bt {
-    background-color: #70AB37;
+    background: #70AB37;
 }
 
 
 #openModalBtn {
-    padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
 }
@@ -261,17 +303,27 @@ hr {
     top: 0;
     right: -300px;
     width: 300px;
-    height: 100%;
-    background-color: #333;
+    max-height: 100%;
+    background-color: #ffffff;
     overflow: auto;
     transition: right 0.3s ease-in-out, opacity 0.3s ease-in-out;
     opacity: 0;
     z-index: 1;
+    border-radius: 10px;
+    border: 2px solid #70AB37;
+    color: black;
+    -webkit-box-shadow: -3px 4px 8px 0px #70AB37;
+    -moz-box-shadow: -3px 4px 8px 0px#70AB37;
+    box-shadow: -3px 4px 8px 0px #70AB37;
+}
+
+.modalULmodalUL a {
+    color: #000000;
 }
 
 .modal-content {
     padding: 20px;
-    color: #fff;
+    color: #000000;
 }
 
 .close {
@@ -294,7 +346,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     font-size: 18px;
     padding: 10px;
@@ -303,7 +355,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #555;
+    background-color: #70AB37;
+    color: #ffffff;
 }
 
 .modal.open {
@@ -318,19 +371,21 @@ nav ul li a:hover {
 
 .month_plan {
     margin-top: 7px;
-    padding: 0px 20px 20px;
-    border-radius: 10px;
-    border: 2px solid #555;
-    background-color: rgb(238, 238, 238);
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 1px solid #555;
+    background-color: #ffffff;
 }
 
-.monthPl_section{
+.monthPl_section {
     margin-top: 20px;
 }
 
 .monthPl_section h2,
 .monthPl_section2 h2 {
     font-size: 20px;
+    text-align: center;
+    font-weight: 400;
 }
 
 
@@ -353,7 +408,8 @@ nav ul li a:hover {
 .tMonth_hidenD5 .days_box p,
 .tMonth_hidenD6 .days_box p,
 .tMonth_hidenD7 .days_box p {
-    font-size: 14px !important;
+    font-size: 12px !important;
+    font-weight: 500;
 }
 
 .tBodyMonth,
@@ -383,8 +439,7 @@ nav ul li a:hover {
 .tBodyMonthw444,
 .tBodyMonthw555,
 .tBodyMonthw666,
-.tBodyMonthw777
- {
+.tBodyMonthw777 {
     display: none;
     width: 100%;
     margin-top: 20px;
@@ -392,8 +447,9 @@ nav ul li a:hover {
 
 
 .reci_fl div:nth-of-type(2) {
-    width: 135px; 
+    max-width: 100%;
 }
+
 /* Styles for fullscreen modal */
 .animated-modal {
     position: fixed;
@@ -403,11 +459,13 @@ nav ul li a:hover {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 1000;
-    transition: top 0.5s ease; /* Animate top position */
+    transition: top 0.5s ease;
+    /* Animate top position */
 }
 
 .animated-modal.active {
-    top: 0; /* Slide down */
+    top: 0;
+    /* Slide down */
 }
 
 .animated-modal-content {
@@ -415,21 +473,26 @@ nav ul li a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-     background-color: white;
-   padding: 20px;
+    background-color: white;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 95%;
+    width: 50%;
     height: 95%;
     text-align: center;
+    border-top: 7px solid #70AB37;
+}
 
-}
-.animated-modal-content p{
-    font-weight: 600;
-}
-.ModalRe{
+.animated-modal-content p {
+    font-weight: 500;
+    font-size: 15px;
     text-align: start;
 }
+
+.ModalRe {
+    text-align: start;
+}
+
 .close-modal-btn {
     position: absolute;
     top: 10px;
@@ -437,15 +500,17 @@ nav ul li a:hover {
     font-size: 30px;
     cursor: pointer;
 }
-.preporatonBox{
+
+.preporatonBox {
     margin-top: 20px;
 }
 
 
-.recipeBlock li{
+.recipeBlock li {
     font-weight: 500;
-margin-left: 30px !important;
+    margin-left: 30px !important;
 }
+
 .open-modal-btn {
     margin: 20px;
     padding: 10px 20px;
@@ -459,6 +524,26 @@ margin-left: 30px !important;
 .open-modal-btn:hover {
     background-color: #2980b9;
 }
+
+
+.recipeModal_block {
+    width: 100%;
+    height: 50px;
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+    border-radius: 25px;
+    border: 0;
+    background-color: #70AB37;
+    cursor: pointer;
+    transition: .4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+
 
 @media (max-width:500px) {
 
@@ -511,6 +596,10 @@ margin-left: 30px !important;
         gap: 20px;
 
     }
-
+    .animated-modal-content {
+        width: 90%;
+        height: 95%;
+      
+    }
 
 }
