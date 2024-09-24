@@ -304,6 +304,49 @@ document.querySelector('.close-modal-btn').addEventListener('click', function ()
 
 document.addEventListener('DOMContentLoaded', function() {
     // Найдем все элементы с классом tBodyMonthday2
+    const dayBlocks = document.querySelectorAll('.WeekContenHidens');
+/*     const dayBlocks = document.querySelectorAll('.tBodyMonthdayAll2');
+ */
+    dayBlocks.forEach(function(dayBlock) {
+        // Найдем все чекбоксы в текущем блоке
+        const checkboxes = dayBlock.querySelectorAll('.chekedInp');
+
+        checkboxes.forEach(function(checkbox) {
+            checkbox.addEventListener('change', function() {
+                // Находим элемент с классом .days_box
+                const dayBox = dayBlock.previousElementSibling;
+
+                // Проверяем, что dayBox существует
+                if (dayBox) {
+                    // Находим элемент с текстом, который нужно изменить
+                    const textElement = dayBox.querySelector('.weekColor');
+                    
+                    // Проверяем, что textElement существует
+                    if (textElement) {
+                        // Подсчитываем количество отмеченных чекбоксов
+                        const checkedCount = dayBlock.querySelectorAll('.chekedInp:checked').length;
+
+                        // Если все чекбоксы отмечены, меняем цвет текста
+                        if (checkedCount === checkboxes.length) {
+                            textElement.style.color = '#70AB37'; // Меняем цвет текста на зеленый
+                        } else {
+                            textElement.style.color = ''; // Сбрасываем цвет текста
+                        }
+                    } else {
+                        console.error('Text element not found');
+                    }
+                } else {
+                    console.error('Day box not found');
+                }
+            });
+        });
+    });
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Найдем все элементы с классом tBodyMonthday2
     const dayBlocks = document.querySelectorAll('.tBodyMonthdayAll2');
 
     dayBlocks.forEach(function(dayBlock) {
@@ -338,3 +381,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+

@@ -210,12 +210,13 @@ i {
 }
 
 .recipeBtn {
-    width: 100%;
+    max-width:100%;
+    padding: 0 5px;
     color: white;
     background-color: #70AB37;
     font-weight: 700;
     border: 0;
-    padding: 5px 0;
+    padding:  5px;
     border-radius: 35px;
     margin-top: 20px;
     font-size: 10px;
@@ -363,6 +364,15 @@ nav ul li a {
     display: block;
     transition: background-color 0.3s ease;
 }
+ul {
+    padding: 0;      /* Убираем отступы */
+    margin: 0;    
+}
+li::marker {
+    color: green;    /* Устанавливаем цвет маркеров на зеленый */
+    font-size: 1.2em; /* При необходимости изменяем размер */
+}
+
 
 nav ul li a:hover {
     background-color: #6fab376b;
