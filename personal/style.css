@@ -113,12 +113,12 @@ header h1 {
 }
 
 .bju_ b {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
 }
 
 .kl_ {
-    font-size: 14px;
+    font-size: 15px;
     text-align: center !important;
     font-weight: 500;
 
@@ -588,7 +588,7 @@ nav ul li a:hover {
     }
 
     .kl_ {
-        font-size: 13px !important;
+        font-size: 14   px !important;
     }
 
     .bju_ p {
@@ -596,7 +596,7 @@ nav ul li a:hover {
     }
 
     .bju_ b {
-        font-size: 12px !important;
+        font-size: 14px !important;
     }
 
 
