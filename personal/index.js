@@ -182,7 +182,6 @@ he_nullMainWeek.onclick = () => {
 
 }
 
-
 // Группа 1 - первая коллекция блоков и кнопок
 const group1Blocks = [
     { button: he_null2, block: tBodyMonth },
@@ -232,19 +231,21 @@ const group4Blocks = [
 ];
 
 // Функция для закрытия всех блоков в одной группе
-function closeGroupBlocks(group) {
+function closeGroupBlocks(group, currentButton) {
     group.forEach(({ block, button }) => {
-        block.classList.remove('heigt_bdWeek');
-        button.classList.remove('rotateBtn');
+        if (button !== currentButton) {
+            block.classList.remove('heigt_bdWeek');
+            button.classList.remove('rotateBtn');
+        }
     });
 }
 
 // Добавляем обработчики для первой группы
 group1Blocks.forEach(({ button, block }) => {
     button.onclick = () => {
-        closeGroupBlocks(group1Blocks); // Закрываем только первую группу
-        block.classList.toggle('heigt_bdWeek');
-        button.classList.toggle('rotateBtn');
+        closeGroupBlocks(group1Blocks, button); // Закрываем только остальные блоки в группе
+        block.classList.toggle('heigt_bdWeek'); // Открытие/закрытие блока
+        button.classList.toggle('rotateBtn'); // Открытие/закрытие кнопки
         console.log("click group 1");
     };
 });
@@ -252,9 +253,9 @@ group1Blocks.forEach(({ button, block }) => {
 // Добавляем обработчики для второй группы
 group2Blocks.forEach(({ button, block }) => {
     button.onclick = () => {
-        closeGroupBlocks(group2Blocks); // Закрываем только вторую группу
-        block.classList.toggle('heigt_bdWeek');
-        button.classList.toggle('rotateBtn');
+        closeGroupBlocks(group2Blocks, button); // Закрываем только остальные блоки в группе
+        block.classList.toggle('heigt_bdWeek'); // Открытие/закрытие блока
+        button.classList.toggle('rotateBtn'); // Открытие/закрытие кнопки
         console.log("click group 2");
     };
 });
@@ -262,51 +263,9 @@ group2Blocks.forEach(({ button, block }) => {
 // Добавляем обработчики для третьей группы
 group3Blocks.forEach(({ button, block }) => {
     button.onclick = () => {
-        closeGroupBlocks(group3Blocks); // Закрываем только третью группу
-        block.classList.toggle('heigt_bdWeek');
-        button.classList.toggle('rotateBtn');
-        console.log("click group 3");
-    };
-});
-
-
-
-////////////////////////////next week/////////////////
-
-// Функция для закрытия всех блоков в одной группе
-function closeGroupBlocks(group) {
-    group.forEach(({ block, button }) => {
-        block.classList.remove('heigt_bdWeek');
-        button.classList.remove('rotateBtn');
-    });
-}
-
-// Добавляем обработчики для первой группы
-group1Blocks.forEach(({ button, block }) => {
-    button.onclick = () => {
-        closeGroupBlocks(group1Blocks); // Закрываем только первую группу
-        block.classList.toggle('heigt_bdWeek');
-        button.classList.toggle('rotateBtn');
-        console.log("click group 1");
-    };
-});
-
-// Добавляем обработчики для второй группы
-group2Blocks.forEach(({ button, block }) => {
-    button.onclick = () => {
-        closeGroupBlocks(group2Blocks); // Закрываем только вторую группу
-        block.classList.toggle('heigt_bdWeek');
-        button.classList.toggle('rotateBtn');
-        console.log("click group 2");
-    };
-});
-
-// Добавляем обработчики для третьей группы
-group3Blocks.forEach(({ button, block }) => {
-    button.onclick = () => {
-        closeGroupBlocks(group3Blocks); // Закрываем только третью группу
-        block.classList.toggle('heigt_bdWeek');
-        button.classList.toggle('rotateBtn');
+        closeGroupBlocks(group3Blocks, button); // Закрываем только остальные блоки в группе
+        block.classList.toggle('heigt_bdWeek'); // Открытие/закрытие блока
+        button.classList.toggle('rotateBtn'); // Открытие/закрытие кнопки
         console.log("click group 3");
     };
 });
@@ -314,9 +273,9 @@ group3Blocks.forEach(({ button, block }) => {
 // Добавляем обработчики для четвертой группы
 group4Blocks.forEach(({ button, block }) => {
     button.onclick = () => {
-        closeGroupBlocks(group4Blocks); // Закрываем только четвертую группу
-        block.classList.toggle('heigt_bdWeek');
-        button.classList.toggle('rotateBtn');
+        closeGroupBlocks(group4Blocks, button); // Закрываем только остальные блоки в группе
+        block.classList.toggle('heigt_bdWeek'); // Открытие/закрытие блока
+        button.classList.toggle('rotateBtn'); // Открытие/закрытие кнопки
         console.log("click group 4");
     };
 });
@@ -340,4 +299,42 @@ document.querySelector('.close-modal-btn').addEventListener('click', function ()
 
     // Hide modal by moving it back up
     modal.classList.remove('active');
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Найдем все элементы с классом tBodyMonthday2
+    const dayBlocks = document.querySelectorAll('.tBodyMonthdayAll2');
+
+    dayBlocks.forEach(function(dayBlock) {
+        // Найдем все чекбоксы в текущем блоке
+        const checkboxes = dayBlock.querySelectorAll('.chekedInp');
+
+        checkboxes.forEach(function(checkbox) {
+            checkbox.addEventListener('change', function() {
+                // Находим элемент с классом .days_box
+                const dayBox = dayBlock.previousElementSibling;
+
+                // Проверяем, что dayBox существует
+                if (dayBox) {
+                    // Находим элемент с текстом, который нужно изменить
+                    const textElement = dayBox.querySelector('.text-to-color');
+                    
+                    // Проверяем, что textElement существует
+                    if (textElement) {
+                        // Добавляем или убираем класс в зависимости от состояния чекбокса
+                        if (this.checked) {
+                            textElement.classList.add('strikethrough'); // Добавляем стиль
+                        } else {
+                            textElement.classList.remove('strikethrough'); // Убираем стиль
+                        }
+                    } else {
+                        console.error('Text element not found');
+                    }
+                } else {
+                    console.error('Day box not found');
+                }
+            });
+        });
+    });
 });
