@@ -172,7 +172,8 @@ header h1 {
 .IngrBodyMonth,
 .IngrBodyMonth2,
 .IngrBodyMonth3,
-.IngrBodyMonth4 {
+.IngrBodyMonth4,
+.IngrBodyOneDay {
     display: none;
     width: 100%;
     margin-top: 30px;
@@ -181,14 +182,16 @@ header h1 {
 .IngrBodyMonth ul,
 .IngrBodyMonth2 ul,
 .IngrBodyMonth3 ul,
-.IngrBodyMonth4 ul {
+.IngrBodyMonth4 ul,
+.IngrBodyOneDay ul {
     list-style: none;
 }
 
 .IngrBodyMonth h3,
 .IngrBodyMonth2 h3,
 .IngrBodyMonth3 h3,
-.IngrBodyMonth4 h3 {
+.IngrBodyMonth4 h3,
+.IngrBodyOneDay h3 {
     margin-top: 20px;
 }
 
@@ -210,13 +213,13 @@ i {
 }
 
 .recipeBtn {
-    max-width:100%;
+    max-width: 100%;
     padding: 0 5px;
     color: white;
     background-color: #70AB37;
     font-weight: 700;
     border: 0;
-    padding:  5px;
+    padding: 5px;
     border-radius: 35px;
     margin-top: 20px;
     font-size: 10px;
@@ -269,6 +272,20 @@ input[type='checkbox'] {
 
 }
 
+.modalSTRbtn {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 28px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    transition: .4s ease;
+    background-color: #70AB37;
+}
+
 .buy_sect a {
     cursor: pointer;
     transition: .4s ease;
@@ -294,10 +311,32 @@ input[type='checkbox'] {
     color: #000000 !important;
 }
 
+.first_btMonth {
+    background: #F7D14A;
+    color: #000000 !important;
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
 .third_bt {
     background: #70AB37;
 }
 
+.down_pM {
+    display: flex !important;
+    gap: 15px;
+    align-items: flex-start;
+    justify-content: space-between !important;
+    background-color: rgb(255 141 141);
+    padding: 15px 7px;
+    color: #fff;
+    border-radius: 5px !important;
+    margin: 35px 0 0;
+
+}
 
 #openModalBtn {
     font-size: 16px;
@@ -364,13 +403,18 @@ nav ul li a {
     display: block;
     transition: background-color 0.3s ease;
 }
+
 ul {
-    padding: 0;      /* Убираем отступы */
-    margin: 0;    
+    padding: 0;
+    /* Убираем отступы */
+    margin: 0;
 }
+
 li::marker {
-    color: green;    /* Устанавливаем цвет маркеров на зеленый */
-    font-size: 1.2em; /* При необходимости изменяем размер */
+    color: green;
+    /* Устанавливаем цвет маркеров на зеленый */
+    font-size: 1.2em;
+    /* При необходимости изменяем размер */
 }
 
 
@@ -571,6 +615,170 @@ nav ul li a:hover {
 
 
 
+.hiddenModalT {
+    display: none;
+}
+
+.analysis-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 80%;
+    max-width: 500px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: all 0.6s ease;
+    z-index: 1000;
+    box-shadow: 1px 1px 32px -4px #70AB37;
+
+}
+
+.btnModal {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 28px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 0;
+    color: white;
+    background-color: #70AB37;
+    cursor: pointer;
+    transition: .4s ease;
+    margin: 0 auto;
+
+}
+
+.btnModal:hover {
+    background-color: #4CAF50;
+    transition: 4.s ease;
+}
+
+.analysis-modal-content {
+    font-size: 15px;
+}
+
+.analysis-modal.showModalT {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.open-analysis-modal-btn {
+    position: relative;
+    cursor: pointer;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.close-analysis-modal {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@keyframes analysisFlyIn {
+    0% {
+        transform: translate(150%, -50%) scale(0.1) rotate(0deg);
+        /* Вылет с правой стороны */
+        opacity: 0;
+    }
+
+
+
+    100% {
+        transform: translate(-50%, -50%) scale(1) rotate(720deg);
+        /* Остановка в центре с полным вращением */
+        opacity: 1;
+    }
+}
+
+@keyframes analysisFlyOut {
+    0% {
+        transform: translate(-50%, -50%) scale(1) rotate(720deg);
+        /* Быстрое вращение */
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(150%, -50%) scale(0) rotate(1440deg);
+        /* Вылет обратно вправо с двойным вращением */
+        opacity: 0;
+    }
+}
+
+
+.analysis-modal.fly-in {
+    animation: analysisFlyIn 1s ease forwards;
+}
+
+.analysis-modal.fly-out {
+    animation: analysisFlyOut 1s ease forwards;
+}
+
+
+
+
+/* Стили для кнопки */
+.unique-btn-456 {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Стили модального окна */
+.unique-modal-789 {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: top 0.5s ease;
+    /* Анимация выезда */
+}
+
+/* Содержимое модального окна */
+.unique-modal-content-1011 {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+}
+
+/* Кнопка закрытия */
+.unique-close-btn-2022 {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Открытое состояние модального окна */
+.unique-modal-789.show {
+    top: 0;
+    /* Появление на экране */
+}
+
+
+
+
 @media (max-width:500px) {
 
     .pr_p,
@@ -588,7 +796,7 @@ nav ul li a:hover {
     }
 
     .kl_ {
-        font-size: 14   px !important;
+        font-size: 14 px !important;
     }
 
     .bju_ p {

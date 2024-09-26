@@ -3,6 +3,11 @@ const modal = document.getElementById('myModal');
 const openModalBtn = document.getElementById('openModalBtn');
 const closeModal = document.querySelector('.close');
 
+const analysisModal = document.getElementById('uniqueAnalysisModal');
+const openAnalysisButton = document.querySelector('.open-analysis-modal-btn');
+const closeAnalysisButton = document.querySelector('.close-analysis-modal');
+
+
 // Открытие модалки
 openModalBtn.onclick = function () {
     modal.style.display = 'block'; // Показываем модалку
@@ -114,6 +119,8 @@ let he_nullw777 = document.querySelector('.he_nullw777')
 let tBodyMonthw777 = document.querySelector('.tBodyMonthw777')
 
 
+let ingridientsBTday1 = document.querySelector('.ingridientsBTday1')
+let IngrBodyOneDay = document.querySelector('.IngrBodyOneDay')
 
 
 let ingridientsBT1 = document.querySelector('.ingridientsBT1')
@@ -135,10 +142,14 @@ let IngrBodyMonth4 = document.querySelector('.IngrBodyMonth4')
 let Month_btn = document.querySelector('.first_bt')
 let oneMonthCont = document.querySelector('.pneMonthContainer')
 let second_section = document.querySelector('.second_section')
+let first_btMonth = document.querySelector('.first_btMonth')
 
 Month_btn.onclick = () => {
     oneMonthCont.style.display = "block"
     second_section.style.display = "none"
+    Month_btn.style.display = "none"
+    first_btMonth.style.display = "block"
+
 }
 
 he_null1.onclick = () => {
@@ -281,6 +292,12 @@ group4Blocks.forEach(({ button, block }) => {
 });
 
 
+ingridientsBTday1.onclick = () => {
+    IngrBodyOneDay.classList.toggle('heigt_bdWeek'); // Открытие/закрытие блока
+    ingridientsBTday1.classList.toggle('rotateBtn'); // Открытие/закрытие кнопки
+
+}
+
 document.querySelectorAll('.recipeBtn').forEach(button => {
     button.addEventListener('click', function () {
         const modal = document.getElementById('customModal');
@@ -302,17 +319,17 @@ document.querySelector('.close-modal-btn').addEventListener('click', function ()
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Найдем все элементы с классом tBodyMonthday2
     const dayBlocks = document.querySelectorAll('.WeekContenHidens');
-/*     const dayBlocks = document.querySelectorAll('.tBodyMonthdayAll2');
- */
-    dayBlocks.forEach(function(dayBlock) {
+    /*     const dayBlocks = document.querySelectorAll('.tBodyMonthdayAll2');
+     */
+    dayBlocks.forEach(function (dayBlock) {
         // Найдем все чекбоксы в текущем блоке
         const checkboxes = dayBlock.querySelectorAll('.chekedInp');
 
-        checkboxes.forEach(function(checkbox) {
-            checkbox.addEventListener('change', function() {
+        checkboxes.forEach(function (checkbox) {
+            checkbox.addEventListener('change', function () {
                 // Находим элемент с классом .days_box
                 const dayBox = dayBlock.previousElementSibling;
 
@@ -320,7 +337,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (dayBox) {
                     // Находим элемент с текстом, который нужно изменить
                     const textElement = dayBox.querySelector('.weekColor');
-                    
+
                     // Проверяем, что textElement существует
                     if (textElement) {
                         // Подсчитываем количество отмеченных чекбоксов
@@ -345,16 +362,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Найдем все элементы с классом tBodyMonthday2
     const dayBlocks = document.querySelectorAll('.tBodyMonthdayAll2');
 
-    dayBlocks.forEach(function(dayBlock) {
+    dayBlocks.forEach(function (dayBlock) {
         // Найдем все чекбоксы в текущем блоке
         const checkboxes = dayBlock.querySelectorAll('.chekedInp');
 
-        checkboxes.forEach(function(checkbox) {
-            checkbox.addEventListener('change', function() {
+        checkboxes.forEach(function (checkbox) {
+            checkbox.addEventListener('change', function () {
                 // Находим элемент с классом .days_box
                 const dayBox = dayBlock.previousElementSibling;
 
@@ -362,7 +379,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (dayBox) {
                     // Находим элемент с текстом, который нужно изменить
                     const textElement = dayBox.querySelector('.text-to-color');
-                    
+
                     // Проверяем, что textElement существует
                     if (textElement) {
                         // Добавляем или убираем класс в зависимости от состояния чекбокса
@@ -382,3 +399,49 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+
+
+
+
+openAnalysisButton.addEventListener('click', () => {
+    analysisModal.classList.remove('hiddenModalT');
+    analysisModal.classList.add('fly-in');
+    analysisModal.classList.add('showModalT');
+});
+
+closeAnalysisButton.addEventListener('click', () => {
+    analysisModal.classList.remove('fly-in');
+    analysisModal.classList.add('fly-out');
+
+    setTimeout(() => {
+        analysisModal.classList.remove('showModalT');
+        analysisModal.classList.add('hiddenModalT');
+        analysisModal.classList.remove('fly-out');
+    }, 1000); // Ждем завершения анимации
+});
+
+
+
+// Получаем элементы
+const modalUnique = document.getElementById('customModalUnique789');
+const openModalBtnUnique = document.getElementById('openModalBtnUnique456');
+const closeModalBtnUnique = document.getElementById('closeModalBtnUnique2022');
+
+// Открытие модального окна
+openModalBtnUnique.addEventListener('click', function() {
+  modalUnique.classList.add('show'); // Добавляем класс для показа
+  analysisModal.classList.remove('fly-in');
+    analysisModal.classList.add('fly-out');
+
+    setTimeout(() => {
+        analysisModal.classList.remove('showModalT');
+        analysisModal.classList.add('hiddenModalT');
+        analysisModal.classList.remove('fly-out');
+    }, 1000); // Ждем завершения анимации
+});
+
+// Закрытие модального окна
+closeModalBtnUnique.addEventListener('click', function() {
+  modalUnique.classList.remove('show'); // Убираем класс для скрытия
+});
