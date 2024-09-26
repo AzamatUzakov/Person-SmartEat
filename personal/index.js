@@ -307,8 +307,8 @@ document.querySelectorAll('.recipeBtn').forEach(button => {
         modal.classList.add('active');
 
         // Set modal content to button's ID
-        modalText.textContent = `You clicked on button with ID: ${this.id}`;
-    });
+/*         modalText.textContent = `You clicked on button with ID: ${this.id}`;
+ */    });
 });
 
 document.querySelector('.close-modal-btn').addEventListener('click', function () {

@@ -16,7 +16,3 @@ closeModalBtn.addEventListener('click', () => {
 });
 
 // Закрыть модалку при клике на затемнение
-overlay.addEventListener('click', () => {
-    modal.classList.remove('open');
-    overlay.classList.remove('show');
-});
