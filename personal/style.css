@@ -40,7 +40,7 @@ header {
 }
 
 header h1 {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 400;
 }
 
@@ -214,7 +214,7 @@ i {
 
 .recipeBtn {
     max-width: 100%;
-    padding: 0 5px;
+    padding:  10px !important;
     color: white;
     background-color: #70AB37;
     font-weight: 700;
@@ -222,7 +222,7 @@ i {
     padding: 5px;
     border-radius: 35px;
     margin-top: 20px;
-    font-size: 10px;
+    font-size: 12px;
     transition: .4s ease;
 }
 
@@ -244,12 +244,13 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 10px !important;
     font-weight: 500;
-    font-size: 10px !important;
+    font-size: 13px !important;
     margin-top: 50px;
 }
-
+.bt_p input{
+scale: 1.5 !important;}
 input[type='checkbox'] {
     accent-color: #4CAF50 !important;
 }
@@ -260,10 +261,10 @@ input[type='checkbox'] {
 
 .buy_sect button {
     width: 100%;
-    height: 40px;
+    height: 50px;
     margin-top: 10px;
     border-radius: 28px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     border: 0;
     color: white;
@@ -639,10 +640,11 @@ nav ul li a:hover {
 
 .btnModal {
     width: 100%;
-    height: 40px;
+    height: 50px;
     margin-top: 10px;
     border-radius: 28px;
-    font-size: 14px;
+    font-size: 16px;
+
     font-weight: 600;
     border: 0;
     color: white;
@@ -659,9 +661,12 @@ nav ul li a:hover {
 }
 
 .analysis-modal-content {
-    font-size: 15px;
+    font-size: 17px;
 }
 
+.analysis-modal-content i{
+    font-size: 15px !important;
+}
 .analysis-modal.showModalT {
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
