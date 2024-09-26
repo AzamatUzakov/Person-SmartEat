@@ -6,7 +6,6 @@ const overlay = document.getElementById('overlay');
 // Открыть модалку
 openModalBtn.addEventListener('click', () => {
     modal.classList.add('open');
-    overlay.classList.add('show');
 });
 
 // Закрыть модалку при клике на крестик
