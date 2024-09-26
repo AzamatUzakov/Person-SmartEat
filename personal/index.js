@@ -143,12 +143,16 @@ let Month_btn = document.querySelector('.first_bt')
 let oneMonthCont = document.querySelector('.pneMonthContainer')
 let second_section = document.querySelector('.second_section')
 let first_btMonth = document.querySelector('.first_btMonth')
+let textNone = document.querySelector('.pr_h')
 
 Month_btn.onclick = () => {
     oneMonthCont.style.display = "block"
     second_section.style.display = "none"
     Month_btn.style.display = "none"
     first_btMonth.style.display = "block"
+    textNone.innerHTML = "Сейчас у вас полный план на 1 месяц"
+
+
 
 }
 
