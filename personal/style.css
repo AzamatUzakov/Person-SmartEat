@@ -620,6 +620,10 @@ nav ul li a:hover {
     display: none;
 }
 
+#openModalBtn{
+    cursor: pointer;
+}
+
 .analysis-modal {
     position: fixed;
     top: 50%;
